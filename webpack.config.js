@@ -6,12 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.ts'
+    main: './src/index.ts',
   },
 
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs'),
   },
 
   plugins: [
@@ -20,32 +20,32 @@ module.exports = {
       templateContent: fs.readFileSync(
         path.resolve(__dirname, './src/index.ejs'),
         'utf8'
-      )
-    })
+      ),
+    }),
   ],
 
   module: {
     rules: [
       {
         test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.worker\.ts$/i,
         use: {
-          loader: 'worker-loader'
-        }
+          loader: 'worker-loader',
+        },
       },
       {
         test: /\.ts$/i,
         loader: 'ts-loader',
         include: [path.resolve(__dirname, 'src')],
-        exclude: [/node_modules/, /\.scss/]
-      }
-    ]
+        exclude: [/node_modules/, /\.scss/],
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.ts', '.js', '.scss']
-  }
+    extensions: ['.ts', '.js', '.scss'],
+  },
 };

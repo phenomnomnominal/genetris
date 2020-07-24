@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && npm run compile && npm run lint",
     "bundle": "npm run clean && webpack --mode production",
-    "clean": "rimraf dist && rimraf reports",
+    "clean": "rimraf docs && rimraf reports",
     "compile": "tsc",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
