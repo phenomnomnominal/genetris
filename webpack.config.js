@@ -21,6 +21,7 @@ module.exports = {
         path.resolve(__dirname, './src/index.ejs'),
         'utf8'
       ),
+      favicon: path.resolve(__dirname, './images/favicon.ico'),
     }),
   ],
 
