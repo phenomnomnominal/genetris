@@ -10,7 +10,7 @@ $highlight-color: rgba(200, 200, 255, 1);
 
 html,
 body {
-  min-width: 390px;
+  min-width: 360px;
 }
 
 @media only screen and (min-width: 0px) {
@@ -100,6 +100,8 @@ body {
 #genetris-focus-canvas-container {
   display: flex;
   margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .genetris__canvas {
@@ -164,7 +166,7 @@ a {
 
 #genetris-info-container {
   font-size: 2rem;
-  padding: 0 1rem;
+  margin: 1rem;
   color: $lowlight-color;
 
   p {
@@ -172,6 +174,7 @@ a {
   }
 
   span {
+    display: block;
     color: $highlight-color;
   }
 }
@@ -186,7 +189,7 @@ button,
 #genetris-speed-slider {
   color: $highlight-color;
   background: $body-background;
-  min-width: 390px;
+  min-width: 360px;
   padding: 2rem;
   font-size: 2rem;
   text-transform: uppercase;
