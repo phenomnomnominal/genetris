@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap');
+
+@import './reset.scss';
+
+$body-background: rgba(0, 0, 10, 1);
+$body-color: white;
+$primary-color: rgba(0, 0, 255, 1);
+$lowlight-color: rgba(100, 100, 255, 1);
+$highlight-color: rgba(200, 200, 255, 1);
+
+html,
+body {
+  min-width: 390px;
+}
+
+@media only screen and (min-width: 0px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+#genetris-run-toggle {
+  button {
+    border-radius: 0;
+  }
+}
+
+#genetris-canvas-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+#genetris-focus-canvas-container {
+  display: flex;
+  margin: 1rem;
+}
+
+.genetris__canvas {
+  outline: 1px solid $lowlight-color;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.genetris__canvas:focus,
+.genetris__canvas--focus {
+  outline: 1px solid $highlight-color;
+}
+
+h1,
+h2,
+h3,
+button,
+label {
+  font-family: 'Righteous';
+}
+
+h1,
+h2,
+h3 {
+  color: $primary-color;
+  margin: 1rem;
+}
+
+#genetris-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#genetris-cpu-warning {
+  text-align: center;
+  text-transform: uppercase;
+
+  h2 {
+    color: $highlight-color;
+  }
+}
+
+p,
+span,
+a {
+  font-family: 'Montserrat';
+}
+
+body {
+  background: $body-background;
+  color: $body-color;
+}
+
+pre {
+  color: $primary-color;
+  text-align: center;
+}
+
+a {
+  color: currentColor;
+}
+
+#genetris-info-container {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: $lowlight-color;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    color: $highlight-color;
+  }
+}
+
+#genetris-controls-container {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+button,
+#genetris-speed-slider {
+  color: $highlight-color;
+  background: $body-background;
+  min-width: 390px;
+  padding: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+button {
+  outline: 1px solid $primary-color;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2px;
+
+  &:hover {
+    outline: 2px solid $primary-color;
+  }
+
+  &:focus {
+    outline: 3px solid $highlight-color;
+  }
+
+  &:active {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+}
+
+#footer-container {
+  padding: 2rem;
+  background: $primary-color;
+
+  p {
+    display: inline-block;
+    color: $highlight-color;
+    padding-right: 1rem;
+  }
+}
