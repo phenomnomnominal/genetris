@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const demoMode = location.hash === '#demo';
   if (demoMode) {
     document.body.classList.add('demo');
+    document.body.removeAttribute('style');
     $speedRange.value = '0';
   }
 
