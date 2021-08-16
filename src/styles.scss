@@ -225,3 +225,13 @@ button {
     padding-right: 1rem;
   }
 }
+
+.demo {
+  #genetris-cpu-warning,
+  #genetris-info-chromosome,
+  #genetris-focus-canvas-container,
+  #genetris-controls-container,
+  #footer-container {
+    display: none;
+  }
+}
